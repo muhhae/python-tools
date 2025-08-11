@@ -2,14 +2,9 @@ import os
 from glob import glob
 from typing import Final
 
-from numpy import extract
 import pandas as pd
-from pandas.core import algorithms
-from pandas.core.apply import com
-import pandasgui
 
 from common import extract_desc, sort_key
-import docs_writer
 from lazy_promotions_parser import GetResult
 from docs_writer import DocsWriter
 from plotly_wrapper import Line, Scatter
