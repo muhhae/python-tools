@@ -23,8 +23,8 @@ def Line(
         width=1000,
     )
     fig.update_traces(
-        opacity=0.5,
-        line=dict(width=3),
+        opacity=0.8,
+        line=dict(width=4),
     )
     fig.update_xaxes(showgrid=True, nticks=12)
     fig.update_yaxes(showgrid=True, nticks=18)
@@ -42,15 +42,16 @@ def Scatter(df: pd.DataFrame, include_zero: bool = False, **kwargs) -> go.Figure
     fig.update_layout(
         font=dict(size=32),
         # height=750,
-        width=750,
+        width=1000,
     )
     fig.update_traces(
-        marker_size=36,
-        marker_line=dict(width=6),
+        opacity=0.8,
+        marker_size=28,
+        marker_line=dict(width=4),
         selector=dict(mode="markers"),
     )
-    fig.update_xaxes(showgrid=True, nticks=10)
-    fig.update_yaxes(showgrid=True, nticks=30)
+    fig.update_xaxes(showgrid=True, nticks=12)
+    fig.update_yaxes(showgrid=True, nticks=18)
     if include_zero:
         fig.update_xaxes(rangemode="tozero")
         fig.update_yaxes(range=[0, 1])
